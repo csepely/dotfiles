@@ -1,0 +1,6 @@
+set tabstospaces
+set tabsize 4
+#set linenumbers
+# markdown syntax
+include "~/.nano/markdown.nanorc"
+include "~/.nano/yaml.nanorc"
