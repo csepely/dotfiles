@@ -1,0 +1,28 @@
+[calendars]
+
+[[admins_arosa_local]]
+path = ~/.vdirsyncer/calendars/admins@arosakft.hu/personal/
+color = auto
+#type = discover
+
+[[csepely_csepely_hu_local]]
+path = ~/.vdirsyncer/calendars/csepely@csepely.hu/calendar:80e2f9b9-7000-cad9-9e66-c7d4e26db8b3/
+#type = discover
+color = auto
+
+[[csp_arosa_local]]
+path = ~/.vdirsyncer/calendars/csepely.peter@arosakft.hu/personal/
+#type = discover
+color = auto
+
+[[peter_csepely_hu_local]]
+path = ~/.vdirsyncer/calendars/peter@csepely.hu/calendar:e1defc7e-8085-d88b-97ce-cfa58f2e9694/
+#type = discover
+color = auto
+
+[locale]
+timeformat = %H:%M
+dateformat = %Y-%m-%d
+longdateformat = %Y-%m-%d
+datetimeformat = %Y-%m-%d %H:%M
+longdatetimeformat = %Y-%m-%d %H:%M
