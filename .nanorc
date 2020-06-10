@@ -4,3 +4,4 @@ set tabsize 4
 # markdown syntax
 include "~/.nano/markdown.nanorc"
 include "~/.nano/yaml.nanorc"
+include "~/.nano/Dockerfile.nanorc"
