@@ -1,7 +1,7 @@
 set tabstospaces
-set tabsize 4
+set tabsize 2
 #set linenumbers
+set guidestripe 80
 # markdown syntax
-include "~/.nano/markdown.nanorc"
-include "~/.nano/yaml.nanorc"
-include "~/.nano/Dockerfile.nanorc"
+include "/usr/share/nano/*.nanorc"
+include "~/.nano/*.nanorc"
