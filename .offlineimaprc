@@ -1,0 +1,74 @@
+# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
+# get started fast.
+
+[general]
+accounts = admins, csepelypeter, thiefhu, csepelypeterGmail
+pythonfile = ~/.offlineimap.py
+
+[Account csepelypeterGmail]
+localrepository = csepelypeterGmail-local
+remoterepository = csepelypeterGmail-remote
+maxage = 30
+
+[Repository csepelypeterGmail-local]
+type = Maildir
+localfolders = ~/Mail/gmail/csepelypeter
+
+[Repository csepelypeterGmail-remote]
+type = Gmail
+remoteuser = csepely.peter@gmail.com
+remotepasseval = get_pass("mutt/csepely.peter@gmail.com")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda foldername: foldername in ['INBOX','[Gmail]/Sent Mail']
+ssl_version = tls1_2
+createfolders = no
+
+[Account thiefhu]
+localrepository = thiefhu-local
+remoterepository = thiefhu-remote
+maxage = 30
+
+[Repository thiefhu-local]
+type = Maildir
+localfolders = ~/Mail/gmail/thiefhu
+
+[Repository thiefhu-remote]
+type = Gmail
+remoteuser = thief.hu@gmail.com
+remotepasseval = get_pass("mutt/thief.hu@gmail.com")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda foldername: foldername in ['INBOX','[Gmail]/Sent Mail']
+ssl_version = tls1_2
+createfolders = no
+
+[Account admins]
+localrepository = admins-local
+remoterepository = admins-remote
+maxage = 30
+
+[Repository admins-local]
+type = Maildir
+localfolders = ~/Mail/arosakft/admins
+
+[Repository admins-remote]
+type = IMAP
+remotehost = r1.agw.hu
+remoteuser = admins@arosakft.hu
+remotepasseval = get_pass("SOGo/arosakft.hu/admins")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Account csepelypeter]
+localrepository = csepelypeter-local
+remoterepository = csepelypeter-remote
+maxage = 30
+
+[Repository csepelypeter-local]
+type = Maildir
+localfolders = ~/Mail/arosakft/csepelypeter
+
+[Repository csepelypeter-remote]
+type = IMAP
+remotehost = r1.agw.hu
+remoteuser = csepely.peter@arosakft.hu
+remotepasseval = get_pass("SOGo/arosakft.hu/csepely.peter")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
