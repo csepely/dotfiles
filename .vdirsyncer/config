@@ -1,106 +1,19 @@
 [general]
 status_path = "~/.vdirsyncer/status/"
 
-[pair csepely_peter_arosa_contacts]
-a = "csp_local"
-b = "csp_remote"
+[pair csepely_hu_csp_contacts]
+a = "csepely_hu_csp_contacts_local"
+b = "csepely_hu_csp_contacts_remote"
 collections = ["from b"]
 conflict_resolution = "b wins"
 
-[storage csp_local]
+[storage csepely_hu_csp_contacts_local]
 type = "filesystem"
-path = "~/.vdirsyncer/contacts/csepely.peter@arosakft.hu/"
+path = "~/.contacts/csepely.hu/csp/"
 fileext = ".vcf"
-[storage csp_remote]
+
+[storage csepely_hu_csp_contacts_remote]
 type = "carddav"
-url = "https://r1.agw.hu/SOGo/dav/csepely.peter@arosakft.hu/Contacts/personal/"
-username = "csepely.peter@arosakft.hu"
-password.fetch = ["command", "/usr/bin/secret-tool", "lookup", "Title", "SOGo/arosakft.hu/csepely.peter"]
-
-[pair csepely_peter_arosakft_hu]
-a = "csp_arosa_local"
-b = "csp_arosa_remote"
-collections = ["from b"]
-metadata = ["color", "displayname"]
-conflict_resolution = "b wins"
-
-[storage csp_arosa_local]
-type = "filesystem"
-path = "~/.vdirsyncer/calendars/csepely.peter@arosakft.hu/"
-fileext = ".ics"
-
-[storage csp_arosa_remote]
-type = "caldav"
-url = "https://r1.agw.hu/SOGo/dav/csepely.peter@arosakft.hu/Calendar/personal.ics"
-username = "csepely.peter@arosakft.hu"
-password.fetch = ["command", "/usr/bin/secret-tool", "lookup", "Title", "SOGo/arosakft.hu/csepely.peter"]
-
-[pair csepely_csepely_hu]
-a = "csepely_csepely_hu_local"
-b = "csepely_csepely_hu_remote"
-collections = ["from b"]
-metadata = ["color", "displayname"]
-conflict_resolution = "b wins"
-
-[storage csepely_csepely_hu_local]
-type = "filesystem"
-path = "~/.vdirsyncer/calendars/csepely@csepely.hu/"
-fileext = ".ics"
-
-[storage csepely_csepely_hu_remote]
-type = "caldav"
-url = "https://mail.csepely.hu:2080/rpc/principals/csepely"
-username = "csepely"
-password.fetch = ["command", "/usr/bin/secret-tool", "lookup", "Title", "caldav/csepely.hu/csepely"]
-
-[pair peter_csepely_hu]
-a = "peter_csepely_hu_local"
-b = "peter_csepely_hu_remote"
-collections = ["from b"]
-metadata = ["color", "displayname"]
-conflict_resolution = "b wins"
-
-[storage peter_csepely_hu_local]
-type = "filesystem"
-path = "~/.vdirsyncer/calendars/peter@csepely.hu/"
-fileext = ".ics"
-
-[storage peter_csepely_hu_remote]
-type = "caldav"
-url = "https://mail.csepely.hu:2080/rpc/principals/peter@csepely.hu"
-username = "peter@csepely.hu"
-password.fetch = ["command", "/usr/bin/secret-tool", "lookup", "Title", "rackforest/csepely.hu/peter"]
-
-[pair admins_arosa_contacts]
-a="admins_local"
-b="admins_remote"
-collections = ["from b"]
-conflict_resolution = "b wins"
-
-[storage admins_local]
-type = "filesystem"
-path = "~/.vdirsyncer/contacts/admins@arosakft.hu/"
-fileext = ".vcf"
-[storage admins_remote]
-type = "carddav"
-url = "https://r1.agw.hu/SOGo/dav/admins@arosakft.hu/Contacts/personal/"
-username = "admins@arosakft.hu"
-password.fetch = ["command", "/usr/bin/secret-tool", "lookup", "Title", "SOGo/arosakft.hu/admins"]
-
-[pair admins_arosakft_hu]
-a = "admins_arosa_local"
-b = "admins_arosa_remote"
-collections = ["from b"]
-metadata = ["color", "displayname"]
-conflict_resolution = "b wins"
-
-[storage admins_arosa_local]
-type = "filesystem"
-path = "~/.vdirsyncer/calendars/admins@arosakft.hu/"
-fileext = ".ics"
-
-[storage admins_arosa_remote]
-type = "caldav"
-url = "https://r1.agw.hu/SOGo/dav/admins@arosakft.hu/Calendar/personal.ics"
-username = "admins@arosakft.hu"
-password.fetch = ["command", "/usr/bin/secret-tool", "lookup", "Title", "SOGo/arosakft.hu/admins"]
+url = "https://csepely.hu/0wn/remote.php/dav/principals/users/csepely.peter/"
+username = "csepely.peter"
+password.fetch = ["command", "/usr/bin/secret-tool", "lookup", "Title", "csepely.hu/0wn/csepely.peter"]
