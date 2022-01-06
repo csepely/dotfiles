@@ -1,23 +1,18 @@
 [calendars]
 
-[[admins_arosa_local]]
-path = ~/.vdirsyncer/calendars/admins@arosakft.hu/personal/
+[[arosa_admins]]
+path = ~/.calendars/arosa/admins/*
 color = auto
-#type = discover
+type = discover
 
-[[csepely_csepely_hu_local]]
-path = ~/.vdirsyncer/calendars/csepely@csepely.hu/calendar:80e2f9b9-7000-cad9-9e66-c7d4e26db8b3/
-#type = discover
-color = auto
-
-[[csp_arosa_local]]
-path = ~/.vdirsyncer/calendars/csepely.peter@arosakft.hu/personal/
-#type = discover
+[[arosa_csp]]
+path = ~/.calendars/arosa/csp/*
+type = discover
 color = auto
 
-[[peter_csepely_hu_local]]
-path = ~/.vdirsyncer/calendars/peter@csepely.hu/calendar:e1defc7e-8085-d88b-97ce-cfa58f2e9694/
-#type = discover
+[[csepely_hu_csp]]
+path = ~/.calendars/csepely.hu/csp/*
+type = discover
 color = auto
 
 [locale]
