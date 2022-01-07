@@ -3,5 +3,5 @@
 #
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-. /home/thief/.profabevjava
+[[ -f ~/.profabevjava ]] && . ~/.profabevjava
 . ~/.profile
