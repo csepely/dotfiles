@@ -10,7 +10,7 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 # load bash conf's
-for i in ~/bash.conf/*.conf;
+for i in ~/bash.conf/enabled/*.conf;
 do
         . $i
 done
