@@ -228,13 +228,14 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # rofi alt+tab
 bindsym Mod1+Tab exec rofi -show window
 
+set $NewLocker convert ~/Pictures/Bing/wallpaper.jpg RGB:- | i3lock --color=475263 --raw 1920x1080:rgb --image /dev/stdin && sleep 1
 set $Locker i3lock -c 475263 && sleep 1
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-  bindsym l exec --no-startup-id $Locker, mode "default"
+  bindsym l exec --no-startup-id $NewLocker, mode "default"
   bindsym e exec --no-startup-id i3-msg exit, mode "default"
-  bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-  bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+  bindsym s exec --no-startup-id $NewLocker && systemctl suspend, mode "default"
+  bindsym h exec --no-startup-id $NewLocker && systemctl hibernate, mode "default"
   bindsym r exec --no-startup-id systemctl reboot, mode "default"
   bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
   bindsym Return mode "default"
